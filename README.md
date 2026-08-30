@@ -1,6 +1,6 @@
 # 🧠 EEG-Based Mental Workload Classification Using Neural Networks
 <p align="center">
-  <img src="1_c3thSZ6Iphzr773MAZ5BAQ.png" alt="EEG-Based Mental Workload Classification" width="700">
+  <img src="images/1_c3thSZ6Iphzr773MAZ5BAQ.png" alt="EEG-Based Mental Workload Classification" width="100%">
 </p>
 <p align="center">
   <strong>From-Scratch Logistic Model vs Convolutional Neural Network</strong>
@@ -9,6 +9,7 @@
 <p align="center">
   EEG • Mental Workload • Machine Learning • Deep Learning • CNN • Feature Selection
 </p>
+
 ## 📌 Overview
 
 This repository contains the implementation and experimental results for an **EEG-based mental workload classification** project developed for the **CE889-SP Neural Networks and Deep Learning** module.
