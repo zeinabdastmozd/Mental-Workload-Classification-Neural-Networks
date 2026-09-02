@@ -12,9 +12,7 @@
 
 ## 📌 Overview
 
-This repository contains the implementation and experimental results for an **EEG-based mental workload classification** project developed for the **CE889-SP Neural Networks and Deep Learning** module.
-
-The project investigates whether EEG signals can be used to distinguish between two levels of mental workload:
+This repository contains the implementation and experimental results for an **EEG-based mental workload classification** The project investigates whether EEG signals can be used to distinguish between two levels of mental workload:
 
 - 🟢 **Low Workload**
 - 🟠 **Medium Workload**
@@ -121,14 +119,6 @@ Mental-Workload-Classification-Neural-Networks/
 ├── .gitignore
 └── .gitattributes
 ```
-## 📓 Notebooks
-
-| Notebook | Purpose |
-|---|---|
-| `CE889_project_sigmoid.ipynb` | Original experimental implementation using the sigmoid activation |
-| `CE889_project_tanh2.ipynb` | Corrected/final experimental implementation using `tanh` and corrected data shuffling |
-
-> **Note:** The `CE889_project_tanh2.ipynb` notebook should be considered the **main corrected experiment** when reproducing the final reported results.
 
 # 🔬 Experimental Workflow
 
@@ -169,7 +159,7 @@ The project follows the workflow below:
 ```
 # 🔵 1. Logistic Model From Scratch
 
-A key requirement of the coursework was to implement the **logistic model manually** rather than directly calling a pre-built logistic regression algorithm.
+A key matter was to implement the **logistic model manually** rather than directly calling a pre-built logistic regression algorithm.
 
 The logistic model was therefore implemented **from scratch**, with the main learning steps separated into individual functions.
 
@@ -300,7 +290,6 @@ The CNN provides greater model capacity and can potentially identify patterns in
 
 The deep learning implementation uses a **publicly available deep learning framework**.
 
-> **Academic Note:** Any external implementation, adapted architecture, or publicly available code should be appropriately acknowledged and referenced in the accompanying academic report.
 
 ---
 
@@ -355,22 +344,7 @@ The reported loss values were:
 | `1 × 10⁻⁵` | 1.26 |
 | `1 × 10⁻⁵*` | 0.805 |
 
-> **Note:** The original experiment notes contain a repeated learning-rate value. The exact value should be verified directly against the notebook before treating this as a formal hyperparameter table.
-
 The results demonstrate that the **learning rate has a strong influence on optimisation and convergence**. Selecting an appropriate learning rate is therefore important for achieving stable training and effective model performance.
-
-# 📈 Results
-
-The corrected experimental results reported in the project are approximately:
-
-| Model | Mean Accuracy |
-|---|---:|
-| Logistic Model | **49.43%** |
-| CNN | **73.89%** |
-
-The **CNN substantially outperformed** the from-scratch logistic model in the corrected experiment.
-
-This suggests that the CNN's **nonlinear representation** was better suited to the high-dimensional EEG classification problem.
 
 ---
 
@@ -391,18 +365,6 @@ The CNN, in contrast, can learn **nonlinear representations** directly from the 
 
 ---
 
-## 📊 Key Observation
-
-The results suggest that **feature selection can have a substantial impact on classification performance**, particularly for simpler models.
-
-| Model | Before Feature Selection | After Feature Selection | Improvement |
-|---|---:|---:|---:|
-| Logistic Model | ~49% | ~71% | **+22 percentage points** |
-| CNN | ~74% | ~78% | **+4 percentage points** |
-
-The logistic model showed a much larger improvement after Fourier-based feature selection, while the CNN achieved a smaller but still positive improvement.
-
-> **Reproducibility Note:** The values above represent the reported experimental results. The final values should be reproduced from `CE889_project_tanh2.ipynb` before being treated as definitive.
 
 # 🏆 Main Findings
 
@@ -633,49 +595,6 @@ Compare Results
 ```
 The final corrected notebook should be used when reproducing the final reported results.
 
-# 📚 References
-
-The project is supported by research relating to **EEG-based mental workload assessment, cognitive workload, and machine learning**.
-
-1. Kakizaki, T. (1984). Relationship between EEG amplitude and subjective rating of task strain during performance of a calculating task. *European Journal of Applied Physiology*, 53(3), 206–212.
-
-2. Yeh, Y., & Wickens, C. D. (1988). Dissociation of performance and subjective measures of workload. *Human Factors*, 30(1), 111–120.
-
-3. Reid, G. B., & Nygren, T. E. (1988). The Subjective Workload Assessment Technique: A scaling procedure for measuring mental workload. *Advances in Psychology*, 52, 185–218.
-
-4. Hogervorst, M. A., Brouwer, A., & van Erp, J. B. F. (2014). Combining and comparing EEG, peripheral physiology and eye-related measures for the assessment of mental workload. *Frontiers in Neuroscience*, 8, 322.
-
-5. Lei, S. G., Sebastian, W., & Matthias, R. (2009). Representation of driver's mental workload in EEG data. *Human Factors and Safety*.
-
-6. Wang, Z., Hope, R. M., Wang, Z., Ji, Q., & Gray, W. D. (2012). Cross-subject workload classification with a hierarchical Bayes model. *NeuroImage*, 59(1), 64–69.
-
-7. Chandra, S., Verma, K. L., Sharma, G., Mittal, A. P., & Jha, D. (2015). EEG based cognitive workload classification during NASA MATB-II multitasking. *International Journal of Cognitive Research in Science, Engineering and Education*, 3(1), 35–41.
-
-8. Chen, J., Hu, B., Xu, L., Moore, P., & Su, Y. (2015). Feature-level fusion of multimodal physiological signals for emotion recognition. *IEEE International Conference on Bioinformatics and Biomedicine*, 395–399.
-
-
-# 📜 Academic Integrity & Code Attribution
-
-This repository was developed as part of **academic coursework** for the CE889-SP Neural Networks and Deep Learning module.
-
-## 🔵 Logistic Model
-
-The logistic classification model was implemented **from scratch** rather than using a pre-built Logistic Regression classifier.
-
-The implementation includes separate stages for:
-
-- Forward propagation
-- Gradient calculation
-- Parameter updates
-- Accuracy evaluation
-
-This approach demonstrates an understanding of the underlying learning process rather than relying on a pre-built classification algorithm.
-
-## 🧠 CNN
-
-The CNN component uses a **publicly available deep-learning framework**.
-
-Any external code, implementation, architecture, or resources adapted for this project should be **appropriately acknowledged and referenced** in the accompanying academic report and, where appropriate, in the relevant notebook.
 
 ---
 
@@ -683,31 +602,5 @@ Any external code, implementation, architecture, or resources adapted for this p
 
 **Zeinab Dastmozd**
 
-**Module:** CE889-SP Neural Networks and Deep Learning
-
 **Project:** EEG-Based Binary-Class Workload Identification Using Feature Fusion and Selection
 
----
-
-# ⭐ Conclusion
-
-This project demonstrates the application of **machine learning and deep learning** to EEG-based mental workload classification.
-
-The experiments compare a **logistic model implemented from scratch** with a **Convolutional Neural Network (CNN)**, while also investigating the effect of **Fourier-based feature selection**.
-
-The results indicate that:
-
-- 🧠 The CNN achieved substantially better performance than the basic logistic model.
-- 🔎 Feature selection substantially improved the performance of the logistic model.
-- 📊 The effect of feature selection differed between the logistic model and CNN.
-- ⚙️ Learning-rate selection influenced the optimisation process.
-- 🔄 Correct data shuffling and validation were essential for obtaining reliable results.
-- 📈 Model performance depends on appropriate preprocessing, feature representation, architecture, and optimisation.
-
-Overall, the project demonstrates that successful EEG classification depends on a combination of **appropriate model architecture, feature representation, preprocessing, optimisation, and rigorous evaluation**.
-
----
-
-<p align="center">
-  <strong>EEG • Mental Workload • Machine Learning • Deep Learning • Neural Networks</strong>
-</p>
